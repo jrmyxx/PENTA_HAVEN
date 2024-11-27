@@ -1,0 +1,222 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Merriweather", serif;
+}
+
+/*NAVBAR*/
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: 10px;
+    padding-left: 10%;
+    padding-right: 10%;
+    padding-bottom: 10px;
+    background-color: #1d1d1d;
+    z-index: 10;
+    position: relative;
+}
+nav img {
+    width: 60px;
+}   
+nav ul li {
+    list-style-type: none;
+    display: inline-block;
+    padding: 10px 20px;
+}
+nav ul li a {
+    color: white;
+    text-decoration: none;
+} 
+nav ul li a:hover {
+    color: rgb(176, 158, 110);
+    transition: .3s;
+}  
+.sign-in-btn{
+    border: none;
+    background: rgb(176, 158, 110);
+    padding: 12px 30px;
+    color: white;
+    font-weight: bold;
+    font-size: 15px;
+    cursor: pointer;
+}
+button:hover {
+    background-color: #1d1d1d;
+    transition: 0.3s ease;
+}
+.checkbtn {
+    font-size: 30px;
+    color: white;
+    cursor: pointer;
+    display: none;
+    z-index: 10;
+}
+#check {
+    display: none;
+}
+
+
+/* ABOUT */
+.about {
+    height: 100vh;
+    width: 100%;
+    background: rgba(176, 158, 110, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.about .main img {
+    width: 650px;
+    max-width: 100%;
+    height: auto;
+    padding: 0 10px;
+    z-index: 1;
+}
+.all-text {
+    width: 600px;
+    max-width: 100%;
+    padding: 0 10px;
+}
+.main {
+    width: 1290px;
+    max-width: 95%;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-around;
+}
+.all-text h4 {
+    font-size: 18px;
+    letter-spacing: 1px;
+    font-weight: 400;
+    margin-bottom: 10px;
+}
+.all-text h1 {
+    font-size: 65px;
+    color: #1d1d1d;
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+.all-text p {
+    font-size: 16px;
+    color: #1d1d1d;
+    line-height: 30px;
+    margin-bottom: 35px;
+}
+.btn button {
+    background: #1d1d1d;
+    padding: 20px 32px;
+    font-size: 16px;
+    font-weight: bold;
+    color: rgb(176, 158, 110);
+    border: none;
+    box-shadow: 0px 16px 32px 0px rgb(0 0 0 / 6%);
+    margin-right: 20px;
+}
+.btn button:hover {
+    background-color: rgb(176, 158, 110);
+    color: #1d1d1d;
+    transition: .3s;
+    cursor: pointer;
+}
+.btn .btn2 {
+    background: #1d1d1d;
+    color: rgb(176, 158, 110);
+}
+
+
+/* Responsive */
+@media (max-width: 858px) {
+    body {
+        font-family: 'Merriweather', serif;
+    }
+    
+/* Navigation */
+    nav img {
+        width: 30px;
+    }
+    .checkbtn {
+        display: block; 
+        margin: 0 auto;
+    }
+    nav ul {
+        font-size: 30px;
+        position: fixed;
+        width: 100%;
+        height: 100vh;
+        background: rgb(176, 158, 110);
+        top: 63px;
+        left: -100%;
+        flex-direction: column;
+        text-align: center;
+        transition: all 0.3s;
+        z-index: 9;
+    }
+    nav ul li {
+        margin: 20px 0; 
+        text-align: center;
+        display: block;
+    }
+    nav ul li a:hover {
+        color: #1d1d1d;
+    }
+    #check:checked ~ ul {
+        left: 0;
+    }
+    .sign-in-btn {
+        .sign-in-btn {
+          position: absolute;
+          top: 15px;
+          right: 15px;
+          margin-left: auto;
+          margin-right: auto;
+          display: block;
+      }
+        }
+
+/* About */
+    .about {
+        padding: 10px;
+        margin: 0;
+        height: 100vh;
+    }
+    .about .main {
+        display: flex;
+        padding-top: 30px;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        padding: 0;
+        width: 100%;
+    }
+    .about .main img {
+        width: 100%;
+        max-width: 100%;
+        height: auto;
+    }
+    .all-text {
+        width: 100%;
+    }
+    .all-text h1 {
+        font-size: 36px;
+    }
+    .all-text p {
+        font-size: 14px;
+    }
+    .btn {
+        width: 100%; 
+        padding: 10px;
+        font-size: 14px;
+        margin: 5px 0;
+    }
+    .btn button {
+        width: 100%; 
+        padding: 10px;
+        font-size: 14px;
+        margin: 5px 0;
+    }
+}

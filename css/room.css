@@ -1,0 +1,213 @@
+body {
+    font-family: 'Merriweather', serif;
+    margin: 0;
+    padding: 0;
+    background-image: url('../Images/bg.jpg');
+}
+
+/*NAVBAR*/
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: 10px;
+    padding-left: 10%;
+    padding-right: 10%;
+    padding-bottom: 10px;
+    background-color: #1d1d1d;
+    z-index: 10;
+    position: relative;
+}   
+nav img {
+    width: 60px;
+}   
+nav ul li {
+    list-style-type: none;
+    display: inline-block;
+    padding: 10px 20px;
+}   
+nav ul li a {
+    color: white;
+    text-decoration: none;
+}   
+nav ul li a:hover {
+    color: rgb(176, 158, 110);
+    transition: .3s;
+} 
+.sign-in-btn{
+    border: none;
+    background: rgb(176, 158, 110);
+    padding: 12px 30px;
+    color: white;
+    font-weight: bold;
+    font-size: 15px;
+    cursor: pointer;
+}
+button:hover {
+    background-color: #1d1d1d;
+    transition: 0.3s ease;
+}
+.checkbtn {
+    font-size: 30px;
+    color: white;
+    cursor: pointer;
+    display: none;
+    z-index: 10;
+}
+#check {
+    display: none;
+}
+
+/* ROOMS */
+.container {
+    width: 80%;
+    margin: auto;
+    overflow: hidden;
+}
+h1 {
+    text-align: center;
+    color: #333;
+}
+.room-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+.room {
+    background: rgba(255, 255, 255, 0.8);
+    border-radius: 5px;
+    margin: 20px;
+    padding: 20px;
+    flex: 1 1 calc(30% - 40px);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+.room img {
+    width: 100%; 
+    height: auto; 
+    border-radius: 5px;
+}
+.view-selection {
+    margin: 15px 0;
+}
+.view-selection h3 {
+    margin: 0;
+}
+.view-selection label {
+    display: inline-block;
+    margin: 5px 0;
+}
+.view-selection input[type="radio"] {
+    margin-right: 5px;
+}
+.customization {
+    margin-top: 15px;
+}
+.customization img {
+    width: 75%; 
+    height: auto;
+    margin-top: 10px;
+}
+.room h2 {
+    color: #1d1d1d;
+}
+.room p {
+    color: #1d1d1d;
+}
+.customization {
+    margin: 10px 0;
+}
+label {
+    display: block;
+    margin: 5px 0;
+}
+select {
+    width: 100%;
+    padding: 5px;
+    margin-bottom: 10px;
+}
+button {
+    background-color: #1d1d1d;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    padding: 10px;
+    cursor: pointer;
+    width: 100%;
+}
+button:hover {
+    background-color: #b09e6e;
+    color: black;
+}
+
+/* Responsive Styles */
+@media (max-width: 858px) {
+    body {
+        font-family: 'Merriweather', serif;
+    }
+    
+/* Navigation */
+    nav img {
+        width: 30px;
+    }
+    .checkbtn {
+        display: block; 
+        margin: 0 auto;
+    }
+    nav ul {
+        font-size: 30px;
+        position: fixed;
+        width: 100%;
+        height: 100vh;
+        background: rgb(176, 158, 110);
+        top: 31px;
+        left: -120%;
+        flex-direction: column;
+        text-align: center;
+        transition: all 0.3s;
+        z-index: 9;
+    }
+    nav ul li {
+        margin: 20px 0; 
+        text-align: center;
+        display: block;
+        margin-right: 50px;
+    }
+    nav ul li a:hover {
+        color: #1d1d1d;
+    }
+    #check:checked ~ ul {
+        left: 0;
+    }
+    .sign-in-btn {
+        .sign-in-btn {
+          position: absolute;
+          top: 15px;
+          right: 15px;
+          margin-left: auto;
+          margin-right: auto;
+          display: block;
+      }
+        }
+}
+
+@media (max-width: 768px) {
+    .room {
+        flex: 1 1 calc(45% - 20px);
+    }
+}
+
+@media (max-width: 480px) {
+    .room {
+        flex: 1 1 calc(100% - 20px);
+    }
+    .customization img {
+        width: 100%;
+    }
+    h1 {
+        font-size: 24px;
+    }
+    button {
+        padding: 12px;
+        font-size: 18px;
+    }
+}
